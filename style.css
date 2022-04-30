@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#head {
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 50px;
+    color: lightcoral;
+}
+
+
+
+html {
+
+    background: url("https://media.istockphoto.com/photos/bubble-talk-or-comment-sign-symbol-on-yellow-background-picture-id1337229983?b=1&k=20&m=1337229983&s=170667a&w=0&h=7R6-YX8Oer-a4HBMIcuYcblezqOlec43cASqh1fqmW8=") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.box {
+    font-family: 'Patrick Hand', cursive;
+    position: absolute;
+    top: 300px;
+    right: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+
+}
+
+#quotes {
+    
+    position: fixed;
+    top: 300px;
+    margin: 20px;
+    font-size: 30px;
+
+}
+
+#author {
+    position: fixed;
+    top: 400px;
+    margin: 20px;
+
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+#btn{
+    border: 2px solid black;
+    position: fixed;
+    top: 480px;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#btn:hover {
+    background-color: black;
+    color: white;
+}

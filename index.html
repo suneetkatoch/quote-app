@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SK Live Quotes</title>
+</head>
+
+<body>
+    <h1 id="head">WELCOME TO SK QUOTES</h1>
+    <div class="box">
+        <div id="quotes"></div>
+        <div id="author"></div>
+        <button id="btn">NEW QUOTES</button>
+    </div>
+    <script>
+        const quotes1 = document.getElementById("quotes");
+        const author = document.getElementById("author");
+        const btn = document.getElementById("btn");
+        let rdata = "";
+        const getnQuotes = () => {
+            let randn = Math.floor(Math.random() * 10);
+            quotes1.innerHTML = `${rdata[randn].text}`;
+            author.innerHTML = `BY->${rdata[randn].author}`;
+            
+
+        };
+
+        const getquotes = async () => {
+
+            const apidata = "https://type.fit/api/quotes";//api link
+            try {
+                let data = await fetch(apidata);//fetch api
+                rdata = await data.json();
+                getnQuotes();
+
+            } catch (error) {
+
+            }
+
+        };
+        btn.addEventListener("click",getnQuotes);
+        getquotes();
+
+    </script>
+</body>
+
+</html>
